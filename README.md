@@ -1,6 +1,9 @@
 # gx-weedshop
 This is a free weed shop script used with a legion weed shop mlo
 
+# Preview
+Preview coming soon
+
 # Dependencies
 https://www.gta5-mods.com/maps/mlo-legion-weed-clinic
 
