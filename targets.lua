@@ -1,5 +1,5 @@
 Citizen.CreateThread(function()
-    exports['qb-target']:AddBoxZone("weedshop-service", vector3(374.4030, -829.8217, 28.1206), 1, 1.2, {
+    exports['qb-target']:AddBoxZone("weedshop-service", vector3(374.4030, -829.8217, 29.1206), 1, 1.2, {
         name = "weedshop-service",
         heading = 91,
         debugpoly = false,
@@ -32,7 +32,7 @@ Citizen.CreateThread(function()
         distance = 3.5
     })
 
-    exports['qb-target']:AddBoxZone("weedshopboard1", vector3(374.8658, -828.8251, 29.3014), 0.5, 0.7, {
+    exports['qb-target']:AddBoxZone("weedshopboard1", vector3(375.5658, -828.8251, 29.3014), 0.5, 0.7, {
         name = "weedshopboard1",
         heading = 87.8,
         debugpoly = false,
