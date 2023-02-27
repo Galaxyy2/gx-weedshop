@@ -33,7 +33,7 @@ Citizen.CreateThread(function()
     SetBlipAsShortRange(blip, true)
 
     BeginTextCommandSetBlipName("STRING")
-    AddTextComponentString('weedshop')
+    AddTextComponentString('Weedshop')
     EndTextCommandSetBlipName(blip)
 end)
 
