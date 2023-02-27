@@ -63,7 +63,7 @@ Citizen.CreateThread(function()
             distance = 1.0
         })
 
-    exports['qb-target']:AddBoxZone("weedshop-weed", vector3(377.1346, -827.4330, 28.2374), 0.7, 1.5, {
+    exports['qb-target']:AddBoxZone("weedshop-weed", vector3(377.1346, -827.4330, 29.2374), 0.7, 1.5, {
         name="weedshop-weed",
         heading=97.15,
         debugPoly=false,
@@ -104,7 +104,7 @@ Citizen.CreateThread(function()
     }, {
             options = {
                 {
-                    event = "gx-weedshop:client:SeeMenu",
+                    event = "gx-weedshop:client:WeedShopMenu",
                     icon = "fas fa-clipboard",
                     label = "See Menu",
                 },
@@ -125,7 +125,7 @@ Citizen.CreateThread(function()
         }, {
                 options = {
                     {
-                        event = "gx-weedshop:client:SeeMenu",
+                        event = "gx-weedshop:client:WeedShopMenu",
                         icon = "fas fa-clipboard",
                         label = "See Menu",
                     },
