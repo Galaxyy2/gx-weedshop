@@ -155,7 +155,7 @@ end)
 
 RegisterNetEvent('gx-weedshop:client:HarvestAk47', function() 
     TriggerEvent('animations:client:EmoteCommandStart', {"mechanic3"})
-    QBCore.Functions.Progressbar('ak47', 'HARVESTING AMNESIA...', 5000, false, true, {
+    QBCore.Functions.Progressbar('ak47', 'HARVESTING AK47...', 5000, false, true, {
         disableMovement = true,
         disableCarMovement = true,
         disableMouse = false,
