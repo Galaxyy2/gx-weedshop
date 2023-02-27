@@ -440,7 +440,7 @@ RegisterNetEvent('gx-weedshop:client:SmokeWhiteWidow', function()
     end)
 end)
 
-RegisterNetEvent("gx-weedshop:client:SeeMenu", function()
+RegisterNetEvent("gx-weedshop:client:Menu", function()
     exports['qb-menu']:openMenu({
         {
             header = "Menu weedshop",
@@ -463,7 +463,7 @@ RegisterNetEvent("gx-weedshop:client:SeeMenu", function()
     })
 end)
 
-RegisterNetEvent('gx-weedshop:client:Menu', function()
+RegisterNetEvent('gx-weedshop:client:WeedShopMenu', function()
     exports['qb-menu']:openMenu({
         {
             header = "weed weedshop",
@@ -480,42 +480,42 @@ RegisterNetEvent('gx-weedshop:client:Menu', function()
             header = "Ak47 Joints",
             txt = "Price: 10$",
             params = {
-                event = "gx-weedshop:client:WeedMenu",
+                event = "gx-weedshop:client:WeedShopMenu",
             }
         },
         {
             header = "Amnesia Joints",
             txt = "Price: 15$",
             params = {
-                event = "gx-weedshop:client:WeedMenu",
+                event = "gx-weedshop:client:WeedShopMenu",
             }
         },
         {
             header = "Og-Kush Joints",
             txt = "Price: 10$",
             params = {
-                event = "gx-weedshop:client:WeedMenu",
+                event = "gx-weedshop:client:WeedShopMenu",
             }
         },
         {
             header = "PurpleHaze Joints",
             txt = "Price: 10$",
             params = {
-                event = "gx-weedshop:client:WeedMenu",
+                event = "gx-weedshop:client:WeedShopMenu",
             }
         },
         {
             header = "Skunk Joints",
             txt = "Price: 15$",
             params = {
-                event = "gx-weedshop:client:WeedMenu",
+                event = "gx-weedshop:client:WeedShopMenu",
             }
         },
         {
             header = "WhiteWidow Joints",
             txt = "Price: 15$",
             params = {
-                event = "gx-weedshop:client:WeedMenu",
+                event = "gx-weedshop:client:WeedShopMenu",
             }
         },
     })
