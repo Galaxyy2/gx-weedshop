@@ -9,7 +9,7 @@ https://www.gta5-mods.com/maps/mlo-legion-weed-clinic
 
 qb-core
 
-Add Empty weed bags to a shop/store
+Add Empty weed bags, Rolling Paper, Trimming Scissors to a shop/store
 
 # Join the Discord
 https://discord.gg/Cbb2Mb62hd
