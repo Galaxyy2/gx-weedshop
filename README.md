@@ -2,7 +2,7 @@
 This is a free weed shop script used with a legion weed shop mlo
 
 # Preview
-https://www.youtube.com/watch?v=QQ3_RvdTd8I&t=14s
+https://www.youtube.com/watch?v=LFIrb1iBdng&t=4s
 
 # Dependencies
 https://www.gta5-mods.com/maps/mlo-legion-weed-clinic
