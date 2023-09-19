@@ -11,6 +11,8 @@ qb-core
 
 Add Empty weed bags, Rolling Paper, Trimming Scissors to a shop/store
 
+Add Images To **-Inventory/html/images
+
 # Join the Discord
 https://discord.gg/Cbb2Mb62hd
 
