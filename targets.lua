@@ -97,7 +97,25 @@ Citizen.CreateThread(function()
                 distance = 1.5
             })
 
-    exports['qb-target']:AddBoxZone("weedshop-menu1", vector3(380.1550, -827.4106, 29.3022), 0.5, 0.4, {
+            exports['qb-target']:AddBoxZone("weedshop-bagweed", vector3(382.49, -817.43, 28.3), 0.7, 1.5, {
+                name="weedshop-bagweedt",
+                heading=97.15,
+                debugPoly=false,
+        
+            }, {
+                    options = {
+                        {
+                            event = "gx-weedshop:client:WeedBagMenu",
+                            icon = "fas fa-rocket",
+                            label = "Get SUM WED",
+                            job = "weedshop",
+                        },
+                    },
+                    distance = 1.5
+                })
+    
+    
+                exports['qb-target']:AddBoxZone("weedshop-menu1", vector3(380.1550, -827.4106, 29.3022), 0.5, 0.4, {
         name="weedshop-menu1",
         debugpoly = false,
         heading=270,
@@ -146,7 +164,7 @@ Citizen.CreateThread(function()
     }, {
         options = {
             {
-            event = "qb-clothing:client:openOutfitMenu",
+            event = "illenium-appearance:client:openOutfitMenu",
             icon = "far fa-tshirt",
             label = "Change Clothes",
             },

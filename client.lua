@@ -52,44 +52,102 @@ RegisterNetEvent('gx-weedshop:client:WeedPlantMenu', function()
         },
         {
             header = "AK47",
-            txt = "Requirements: <br> - 1 Trimming scissors <br> - 5 Empty Weed Bags",
+            txt = "Requirements: <br> - 1 Trimming scissors",
             params = {
                 event = "gx-weedshop:client:HarvestAk47",
             }
         },
         {
             header = "Amnesia",
-            txt = "Requirements: <br> - 1 Trimming scissors <br> - 5 Empty Weed Bags",
+            txt = "Requirements: <br> - 1 Trimming scissors",
             params = {
                 event = "gx-weedshop:client:HarvestAmnesia",
             }
         },
         {
             header = "Og-Kush",
-            txt = "Requirements: <br> - 1 Trimming scissors <br> - 5 Empty Weed Bags",
+            txt = "Requirements: <br> - 1 Trimming scissors",
             params = {
                 event = "gx-weedshop:client:HarvestOgKush",
             }
         },
         {
             header = "Purple-Haze",
-            txt = "Requirements: <br> - 1 Trimming scissors <br> - 5 Empty Weed Bags",
+            txt = "Requirements: <br> - 1 Trimming scissors",
             params = {
                 event = "gx-weedshop:client:HarvestPurpleHaze",
             }
         },
         {
             header = "Skunk",
-            txt = "Requirements: <br> - 1 Trimming scissors <br> - 5 Empty Weed Bags",
+            txt = "Requirements: <br> - 1 Trimming scissors",
             params = {
                 event = "gx-weedshop:client:HarvestSkunk",
             }
         },
         {
             header = "WhiteWidow",
-            txt = "Requirements: <br> - 1 Trimming scissors <br> - 5 Empty Weed Bags",
+            txt = "Requirements: <br> - 1 Trimming scissors",
             params = {
                 event = "gx-weedshop:client:HarvestWhiteWidow",
+            }
+        },
+    })
+end)
+
+RegisterNetEvent('gx-weedshop:client:WeedBagMenu', function() 
+    exports['qb-menu']:openMenu({
+        {
+            header = "weed weedshop",
+            isMenuHeader = true,
+        },
+        {
+            header = "< Close Menu",
+            txt = "",
+            params = {
+                event = "qb-menu:closeMenu",
+            }
+        },
+        {
+            header = "AK47",
+            txt = "Requirements: <br> - 5 Ak47 Bud <br> - 5 Empty Weed Bags",
+            params = {
+                event = "gx-weedshop:client:BagAk47",
+            }
+        },
+        {
+            header = "Amnesia",
+            txt = "Requirements: <br> - 5 Amnesia Bud <br> - 5 Empty Weed Bags",
+            params = {
+                event = "gx-weedshop:client:BagAmnesia",
+            }
+        },
+        {
+            header = "Og-Kush",
+            txt = "Requirements: <br> - 5 OgKush Bud <br> - 5 Empty Weed Bags",
+            params = {
+                event = "gx-weedshop:client:BagOgKush",
+            }
+        },
+        {
+            header = "Purple-Haze",
+            txt = "Requirements: <br> - 5 PurpleHaze Bud <br> - 5 Empty Weed Bags",
+            params = {
+                event = "gx-weedshop:client:BagPurpleHaze",
+            }
+        },
+        {
+            header = "Skunk",
+            txt = "Requirements: <br> - 5 Skunk Bud <br> - 5 Empty Weed Bags",
+            params = {
+                event = "gx-weedshop:client:BagSkunk",
+            }
+        },
+        {
+            header = "WhiteWidow",
+            txt = "Requirements: <br> - 5 White Widow Bud <br> - 5 Empty Weed Bags",
+            params = {
+                event = "gx-weedshop:client:BagWhiteWidow",
             }
         },
     })
@@ -112,49 +170,49 @@ RegisterNetEvent('gx-weedshop:client:WeedMenu', function()
             header = "AK47",
             txt = "Requirements: <br> - 5 Rolling Paper <br> - 5 Ak47 Bags",
             params = {
-                event = "gx-weedshop:client:BagAk47",
+                event = "gx-weedshop:client:RollAk47",
             }
         },
         {
             header = "Amnesia",
             txt = "Requirements: <br> - 5 Rolling Paper <br> - 5 Amnesia Bags",
             params = {
-                event = "gx-weedshop:client:BagAmnesia",
+                event = "gx-weedshop:client:RollAmnesia",
             }
         },
         {
             header = "Og-Kush",
             txt = "Requirements: <br> - 5 Rolling Paper <br> - 5 Og-Kush Bags",
             params = {
-                event = "gx-weedshop:client:BagOgKush",
+                event = "gx-weedshop:client:RollOgKush",
             }
         },
         {
             header = "Purple-Haze",
             txt = "Requirements: <br> - 5 Rolling Paper <br> - 5 Purple-Haze Bags",
             params = {
-                event = "gx-weedshop:client:BagPurpleHaze",
+                event = "gx-weedshop:client:RollPurpleHaze",
             }
         },
         {
             header = "Skunk",
             txt = "Requirements: <br> - 5 Rolling Paper <br> - 5 Skunk Bags",
             params = {
-                event = "gx-weedshop:client:BagSkunk",
+                event = "gx-weedshop:client:RollSkunk",
             }
         },
         {
             header = "WhiteWidow",
             txt = "Requirements: <br> - 5 Rolling Paper <br> - 5 WW Bags",
             params = {
-                event = "gx-weedshop:client:BagWhiteWidow",
+                event = "gx-weedshop:client:RollWhiteWidow",
             }
         },
     })
 end)
 
 RegisterNetEvent('gx-weedshop:client:HarvestAk47', function() 
-    TriggerEvent('animations:client:EmoteCommandStart', {"mechanic3"})
+    TriggerEvent('animations:client:EmoteCommandStart', {"mechanic"})
     QBCore.Functions.Progressbar('ak47', 'HARVESTING AK47...', 5000, false, true, {
         disableMovement = true,
         disableCarMovement = true,
@@ -167,7 +225,7 @@ RegisterNetEvent('gx-weedshop:client:HarvestAk47', function()
 end)
 
 RegisterNetEvent('gx-weedshop:client:HarvestAmnesia', function() 
-    TriggerEvent('animations:client:EmoteCommandStart', {"mechanic3"})
+    TriggerEvent('animations:client:EmoteCommandStart', {"mechanic"})
     QBCore.Functions.Progressbar('amnesia', 'HARVESTING AMNESIA...', 5000, false, true, {
         disableMovement = true,
         disableCarMovement = true,
@@ -180,7 +238,7 @@ RegisterNetEvent('gx-weedshop:client:HarvestAmnesia', function()
 end)
 
 RegisterNetEvent('gx-weedshop:client:HarvestOgKush', function() 
-    TriggerEvent('animations:client:EmoteCommandStart', {"mechanic3"})
+    TriggerEvent('animations:client:EmoteCommandStart', {"mechanic"})
     QBCore.Functions.Progressbar('ogkush', 'HARVESTING OGKUSH...', 5000, false, true, {
         disableMovement = true,
         disableCarMovement = true,
@@ -193,7 +251,7 @@ RegisterNetEvent('gx-weedshop:client:HarvestOgKush', function()
 end)
 
 RegisterNetEvent('gx-weedshop:client:HarvestPurpleHaze', function() 
-    TriggerEvent('animations:client:EmoteCommandStart', {"mechanic3"})
+    TriggerEvent('animations:client:EmoteCommandStart', {"mechanic"})
     QBCore.Functions.Progressbar('purplehaze', 'HARVESTING PURPLEHAZE...', 5000, false, true, {
         disableMovement = true,
         disableCarMovement = true,
@@ -206,7 +264,7 @@ RegisterNetEvent('gx-weedshop:client:HarvestPurpleHaze', function()
 end)
 
 RegisterNetEvent('gx-weedshop:client:HarvestSkunk', function() 
-    TriggerEvent('animations:client:EmoteCommandStart', {"mechanic3"})
+    TriggerEvent('animations:client:EmoteCommandStart', {"mechanic"})
     QBCore.Functions.Progressbar('skunk', 'HARVESTING SKUNK...', 5000, false, true, {
         disableMovement = true,
         disableCarMovement = true,
@@ -219,7 +277,7 @@ RegisterNetEvent('gx-weedshop:client:HarvestSkunk', function()
 end)
 
 RegisterNetEvent('gx-weedshop:client:HarvestWhiteWidow', function() 
-    TriggerEvent('animations:client:EmoteCommandStart', {"mechanic3"})
+    TriggerEvent('animations:client:EmoteCommandStart', {"mechanic"})
     QBCore.Functions.Progressbar('whitewidow', 'HARVESTING WHITEWIDOW...', 5000, false, true, {
         disableMovement = true,
         disableCarMovement = true,
@@ -305,6 +363,84 @@ RegisterNetEvent('gx-weedshop:client:BagWhiteWidow', function()
         disableCombat = true,
     }, {}, {}, {}, function()
         TriggerServerEvent('gx-weedshop:server:BagWhiteWidow')
+        TriggerEvent('animations:client:EmoteCommandStart', {"c"})
+    end)
+end)
+
+RegisterNetEvent('gx-weedshop:client:RollAk47', function() 
+    TriggerEvent('animations:client:EmoteCommandStart', {"mechanic"})
+    QBCore.Functions.Progressbar('rak47', 'ROLLING AK47...', 5000, false, true, {
+        disableMovement = true,
+        disableCarMovement = true,
+        disableMouse = false,
+        disableCombat = true,
+    }, {}, {}, {}, function()
+        TriggerServerEvent('gx-weedshop:server:RollAk47')
+        TriggerEvent('animations:client:EmoteCommandStart', {"c"})
+    end)
+end)
+
+RegisterNetEvent('gx-weedshop:client:RollAmnesia', function() 
+    TriggerEvent('animations:client:EmoteCommandStart', {"mechanic"})
+    QBCore.Functions.Progressbar('ramnesia', 'ROLLING AMNESIA...', 5000, false, true, {
+        disableMovement = true,
+        disableCarMovement = true,
+        disableMouse = false,
+        disableCombat = true,
+    }, {}, {}, {}, function()
+        TriggerServerEvent('gx-weedshop:server:RollAmnesia')
+        TriggerEvent('animations:client:EmoteCommandStart', {"c"})
+    end)
+end)
+
+RegisterNetEvent('gx-weedshop:client:RollOgKush', function() 
+    TriggerEvent('animations:client:EmoteCommandStart', {"mechanic"})
+    QBCore.Functions.Progressbar('rogkush', 'ROLLING OGKUSH...', 5000, false, true, {
+        disableMovement = true,
+        disableCarMovement = true,
+        disableMouse = false,
+        disableCombat = true,
+    }, {}, {}, {}, function()
+        TriggerServerEvent('gx-weedshop:server:RollOgKush')
+        TriggerEvent('animations:client:EmoteCommandStart', {"c"})
+    end)
+end)
+
+RegisterNetEvent('gx-weedshop:client:RollPurpleHaze', function() 
+    TriggerEvent('animations:client:EmoteCommandStart', {"mechanic"})
+    QBCore.Functions.Progressbar('rpurplehaze', 'ROLLING PURPLEHAZE...', 5000, false, true, {
+        disableMovement = true,
+        disableCarMovement = true,
+        disableMouse = false,
+        disableCombat = true,
+    }, {}, {}, {}, function()
+        TriggerServerEvent('gx-weedshop:server:RollPurpleHaze')
+        TriggerEvent('animations:client:EmoteCommandStart', {"c"})
+    end)
+end)
+
+RegisterNetEvent('gx-weedshop:client:RollSkunk', function() 
+    TriggerEvent('animations:client:EmoteCommandStart', {"mechanic"})
+    QBCore.Functions.Progressbar('rskunk', 'ROLLING SKUNK...', 5000, false, true, {
+        disableMovement = true,
+        disableCarMovement = true,
+        disableMouse = false,
+        disableCombat = true,
+    }, {}, {}, {}, function()
+        TriggerServerEvent('gx-weedshop:server:RollSkunk')
+        TriggerEvent('animations:client:EmoteCommandStart', {"c"})
+    end)
+end)
+
+RegisterNetEvent('gx-weedshop:client:RollWhiteWidow', function() 
+    TriggerEvent('animations:client:EmoteCommandStart', {"mechanic"})
+    QBCore.Functions.Progressbar('rwhitewidow', 'ROLLING WHITEWIDOW...', 5000, false, true, {
+        disableMovement = true,
+        disableCarMovement = true,
+        disableMouse = false,
+        disableCombat = true,
+    }, {}, {}, {}, function()
+        TriggerServerEvent('gx-weedshop:server:RollWhiteWidow')
         TriggerEvent('animations:client:EmoteCommandStart', {"c"})
     end)
 end)

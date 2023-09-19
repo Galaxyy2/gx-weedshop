@@ -4,13 +4,11 @@ RegisterNetEvent('gx-weedshop:server:HarvestAk47', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     local trimmingscissors = Player.Functions.GetItemByName('trimming_scissors')
-    local emptyweedbag = Player.Functions.GetItemByName('empty_weed_bag')
 
-    if trimmingscissors ~= nil and emptyweedbag ~= nil then
+    if trimmingscissors ~= nil then
 
-        Player.Functions.RemoveItem('empty_weed_bag', 5)
-        Player.Functions.AddItem('weed_ak47', 5)
-        TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items["weed_ak47"], "add")
+        Player.Functions.AddItem('ak47_bud', 5)
+        TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items["ak47_bud"], "add")
     else
         TriggerClientEvent('QBCore:Notify', src, 'You do not have the right items...', 'error')
     end
@@ -20,13 +18,11 @@ RegisterNetEvent('gx-weedshop:server:HarvestAmnesia', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     local trimmingscissors = Player.Functions.GetItemByName('trimming_scissors')
-    local emptyweedbag = Player.Functions.GetItemByName('empty_weed_bag')
 
-    if trimmingscissors ~= nil and emptyweedbag ~= nil then
+    if trimmingscissors ~= nil then
 
-        Player.Functions.RemoveItem('empty_weed_bag', 5)
-        Player.Functions.AddItem('weed_amnesia', 5)
-        TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items["weed_amnesia"], "add")
+        Player.Functions.AddItem('amnesia_bud', 5)
+        TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items["amnesia_bud"], "add")
     else
         TriggerClientEvent('QBCore:Notify', src, 'You do not have the right items...', 'error')
     end
@@ -36,13 +32,11 @@ RegisterNetEvent('gx-weedshop:server:HarvestOgKush', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     local trimmingscissors = Player.Functions.GetItemByName('trimming_scissors')
-    local emptyweedbag = Player.Functions.GetItemByName('empty_weed_bag')
 
-    if trimmingscissors ~= nil and emptyweedbag ~= nil then
+    if trimmingscissors ~= nil then
 
-        Player.Functions.RemoveItem('empty_weed_bag', 5)
-        Player.Functions.AddItem('weed_og-kush', 5)
-        TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items["weed_og-kush"], "add")
+        Player.Functions.AddItem('ogkush_bud', 5)
+        TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items["ogkush_bud"], "add")
     else
         TriggerClientEvent('QBCore:Notify', src, 'You do not have the right items...', 'error')
     end
@@ -52,13 +46,11 @@ RegisterNetEvent('gx-weedshop:server:HarvestPurpleHaze', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     local trimmingscissors = Player.Functions.GetItemByName('trimming_scissors')
-    local emptyweedbag = Player.Functions.GetItemByName('empty_weed_bag')
 
-    if trimmingscissors ~= nil and emptyweedbag ~= nil then
+    if trimmingscissors ~= nil then
 
-        Player.Functions.RemoveItem('empty_weed_bag', 5)
-        Player.Functions.AddItem('weed_purple-haze', 5)
-        TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items["weed_purple-haze"], "add")
+        Player.Functions.AddItem('purplehaze_bud', 5)
+        TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items["purplehaze_bud"], "add")
     else
         TriggerClientEvent('QBCore:Notify', src, 'You do not have the right items...', 'error')
     end
@@ -68,13 +60,11 @@ RegisterNetEvent('gx-weedshop:server:HarvestSkunk', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     local trimmingscissors = Player.Functions.GetItemByName('trimming_scissors')
-    local emptyweedbag = Player.Functions.GetItemByName('empty_weed_bag')
 
-    if trimmingscissors ~= nil and emptyweedbag ~= nil then
+    if trimmingscissors ~= nil then
 
-        Player.Functions.RemoveItem('empty_weed_bag', 5)
-        Player.Functions.AddItem('weed_skunk', 5)
-        TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items["weed_skunk"], "add")
+        Player.Functions.AddItem('skunk_bud', 5)
+        TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items["skunk_bud"], "add")
     else
         TriggerClientEvent('QBCore:Notify', src, 'You do not have the right items...', 'error')
     end
@@ -84,11 +74,111 @@ RegisterNetEvent('gx-weedshop:server:HarvestWhiteWidow', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     local trimmingscissors = Player.Functions.GetItemByName('trimming_scissors')
+
+    if trimmingscissors ~= nil then
+
+        Player.Functions.AddItem('whitewidow_bud', 5)
+        TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items["whitewidow_bud"], "add")
+    else
+        TriggerClientEvent('QBCore:Notify', src, 'You do not have the right items...', 'error')
+    end
+end)
+
+RegisterNetEvent('gx-weedshop:server:BagAk47', function()
+    local src = source
+    local Player = QBCore.Functions.GetPlayer(src)
+    local ak47bud = Player.Functions.GetItemByName('ak47_bud')
     local emptyweedbag = Player.Functions.GetItemByName('empty_weed_bag')
 
-    if trimmingscissors ~= nil and emptyweedbag ~= nil then
+    if ak47bud ~= nil and emptyweedbag ~= nil then
 
         Player.Functions.RemoveItem('empty_weed_bag', 5)
+        Player.Functions.RemoveItem('ak47_bud', 5)
+        Player.Functions.AddItem('weed_ak47', 5)
+        TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items["weed_ak47"], "add")
+    else
+        TriggerClientEvent('QBCore:Notify', src, 'You do not have the right items...', 'error')
+    end
+end)
+
+RegisterNetEvent('gx-weedshop:server:BagAmnesia', function()
+    local src = source
+    local Player = QBCore.Functions.GetPlayer(src)
+    local amnesiabud = Player.Functions.GetItemByName('amnesia_bud')
+    local emptyweedbag = Player.Functions.GetItemByName('empty_weed_bag')
+
+    if amnesiabud ~= nil and emptyweedbag ~= nil then
+
+        Player.Functions.RemoveItem('empty_weed_bag', 5)
+        Player.Functions.RemoveItem('amnesia_bud', 5)
+        Player.Functions.AddItem('weed_amensia', 5)
+        TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items["weed_amensia"], "add")
+    else
+        TriggerClientEvent('QBCore:Notify', src, 'You do not have the right items...', 'error')
+    end
+end)
+
+RegisterNetEvent('gx-weedshop:server:BagOgKush', function()
+    local src = source
+    local Player = QBCore.Functions.GetPlayer(src)
+    local ogkushbud = Player.Functions.GetItemByName('ogkush_bud')
+    local emptyweedbag = Player.Functions.GetItemByName('empty_weed_bag')
+
+    if ogkushbud ~= nil and emptyweedbag ~= nil then
+
+        Player.Functions.RemoveItem('empty_weed_bag', 5)
+        Player.Functions.RemoveItem('ogkush_bud', 5)
+        Player.Functions.AddItem('weed_og-kush', 5)
+        TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items["weed_og-kush"], "add")
+    else
+        TriggerClientEvent('QBCore:Notify', src, 'You do not have the right items...', 'error')
+    end
+end)
+
+RegisterNetEvent('gx-weedshop:server:BagPurpleHaze', function()
+    local src = source
+    local Player = QBCore.Functions.GetPlayer(src)
+    local purplehazebud = Player.Functions.GetItemByName('purplehaze_bud')
+    local emptyweedbag = Player.Functions.GetItemByName('empty_weed_bag')
+
+    if purplehazebud ~= nil and emptyweedbag ~= nil then
+
+        Player.Functions.RemoveItem('empty_weed_bag', 5)
+        Player.Functions.RemoveItem('purplehaze_bud', 5)
+        Player.Functions.AddItem('weed_purple-haze', 5)
+        TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items["weed_purple-haze"], "add")
+    else
+        TriggerClientEvent('QBCore:Notify', src, 'You do not have the right items...', 'error')
+    end
+end)
+
+RegisterNetEvent('gx-weedshop:server:BagSkunk', function()
+    local src = source
+    local Player = QBCore.Functions.GetPlayer(src)
+    local skunkbud = Player.Functions.GetItemByName('skunk_bud')
+    local emptyweedbag = Player.Functions.GetItemByName('empty_weed_bag')
+
+    if skunkbud ~= nil and emptyweedbag ~= nil then
+
+        Player.Functions.RemoveItem('empty_weed_bag', 5)
+        Player.Functions.RemoveItem('skunk_bud', 5)
+        Player.Functions.AddItem('weed_skunk', 5)
+        TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items["weed_skunk"], "add")
+    else
+        TriggerClientEvent('QBCore:Notify', src, 'You do not have the right items...', 'error')
+    end
+end)
+
+RegisterNetEvent('gx-weedshop:server:BagWhiteWidow', function()
+    local src = source
+    local Player = QBCore.Functions.GetPlayer(src)
+    local whitewidowbud = Player.Functions.GetItemByName('whitewidow_bud')
+    local emptyweedbag = Player.Functions.GetItemByName('empty_weed_bag')
+
+    if whitewidowbud ~= nil and emptyweedbag ~= nil then
+
+        Player.Functions.RemoveItem('empty_weed_bag', 5)
+        Player.Functions.RemoveItem('whitewidow_bud', 5)
         Player.Functions.AddItem('weed_white-widow', 5)
         TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items["weed_white-widow"], "add")
     else
@@ -96,7 +186,7 @@ RegisterNetEvent('gx-weedshop:server:HarvestWhiteWidow', function()
     end
 end)
 
-RegisterNetEvent('gx-weedshop:server:BagAk47', function()
+RegisterNetEvent('gx-weedshop:server:RollAk47', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     local weedak47 = Player.Functions.GetItemByName('weed_ak47')
@@ -113,7 +203,7 @@ RegisterNetEvent('gx-weedshop:server:BagAk47', function()
     end
 end)
 
-RegisterNetEvent('gx-weedshop:server:BagAmnesia', function()
+RegisterNetEvent('gx-weedshop:server:RollAmnesia', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     local weedamnesia = Player.Functions.GetItemByName('weed_amnesia')
@@ -130,7 +220,7 @@ RegisterNetEvent('gx-weedshop:server:BagAmnesia', function()
     end
 end)
 
-RegisterNetEvent('gx-weedshop:server:BagOgKush', function()
+RegisterNetEvent('gx-weedshop:server:RollOgKush', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     local weedogkush = Player.Functions.GetItemByName('weed_og-kush')
@@ -147,7 +237,7 @@ RegisterNetEvent('gx-weedshop:server:BagOgKush', function()
     end
 end)
 
-RegisterNetEvent('gx-weedshop:server:BagPurpleHaze', function()
+RegisterNetEvent('gx-weedshop:server:RollPurpleHaze', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     local weedphaze = Player.Functions.GetItemByName('weed_purple-haze')
@@ -164,7 +254,7 @@ RegisterNetEvent('gx-weedshop:server:BagPurpleHaze', function()
     end
 end)
 
-RegisterNetEvent('gx-weedshop:server:BagSkunk', function()
+RegisterNetEvent('gx-weedshop:server:RollSkunk', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     local weedskunk = Player.Functions.GetItemByName('weed_skunk')
@@ -181,7 +271,7 @@ RegisterNetEvent('gx-weedshop:server:BagSkunk', function()
     end
 end)
 
-RegisterNetEvent('gx-weedshop:server:BagWhiteWidow', function()
+RegisterNetEvent('gx-weedshop:server:RollWhiteWidow', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     local weedww = Player.Functions.GetItemByName('weed_white-widow')
