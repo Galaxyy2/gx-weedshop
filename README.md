@@ -1,6 +1,9 @@
 # gx-weedshop
 This is version 2 of a free weed shop script used with a legion weed shop mlo 
 
+# Docs
+https://gx-or-scripts.gitbook.io/gx-scripts-docs/
+
 # Preview
 https://www.youtube.com/watch?v=LFIrb1iBdng&t=4s
 
