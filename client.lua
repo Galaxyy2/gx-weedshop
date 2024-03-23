@@ -40,7 +40,7 @@ end)
 RegisterNetEvent('gx-weedshop:client:WeedPlantMenu', function() 
     exports['qb-menu']:openMenu({
         {
-            header = "weed weedshop",
+            header = "Trim Weed",
             isMenuHeader = true,
         },
         {
@@ -98,7 +98,7 @@ end)
 RegisterNetEvent('gx-weedshop:client:WeedBagMenu', function() 
     exports['qb-menu']:openMenu({
         {
-            header = "weed weedshop",
+            header = "Bag Weed",
             isMenuHeader = true,
         },
         {
@@ -156,7 +156,7 @@ end)
 RegisterNetEvent('gx-weedshop:client:WeedMenu', function() 
     exports['qb-menu']:openMenu({
         {
-            header = "weeds weedshop",
+            header = "Roll Joints",
             isMenuHeader = true,
         },
         {
@@ -579,7 +579,7 @@ end)
 RegisterNetEvent("gx-weedshop:client:Menu", function()
     exports['qb-menu']:openMenu({
         {
-            header = "Menu weedshop",
+            header = "Weedshop Menu",
             isMenuHeader = true,
         },
         {
@@ -602,7 +602,7 @@ end)
 RegisterNetEvent('gx-weedshop:client:WeedShopMenu', function()
     exports['qb-menu']:openMenu({
         {
-            header = "weed weedshop",
+            header = "Weedshop Menu",
             isMenuHeader = true,
         },
         {
