@@ -98,7 +98,7 @@ Citizen.CreateThread(function()
             })
 
             exports['qb-target']:AddBoxZone("weedshop-bagweed", vector3(382.49, -817.43, 28.3), 0.7, 1.5, {
-                name="weedshop-bagweedt",
+                name="weedshop-bagweed",
                 heading=97.15,
                 debugPoly=false,
         
