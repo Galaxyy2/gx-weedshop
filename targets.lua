@@ -17,7 +17,7 @@ Citizen.CreateThread(function()
         distance = 1.5
     })
 
-    exports['qb-target']:AddBoxZone("counterweedshop", vector3(378.7853, -826.6912, 29.3022), 1.6, 3.6, {
+    exports['qb-target']:AddBoxZone("counterweedshop", vector3(378.7853, -827.4330, 29.3022), 1.6, 3.6, {
         name="counterweedshop",
         heading=89,
         debugpoly = false,
@@ -29,7 +29,7 @@ Citizen.CreateThread(function()
             label = "Counter",
             },
         },
-        distance = 3.5
+        distance = 1.0
     })
 
     exports['qb-target']:AddBoxZone("weedshopboard1", vector3(375.5658, -828.8251, 29.3014), 0.5, 0.7, {
@@ -80,7 +80,7 @@ Citizen.CreateThread(function()
             distance = 1.5
         })
 
-        exports['qb-target']:AddBoxZone("weedshop-weedplant", vector3(383.4165, -812.9147, 29.3042), 0.7, 1.5, {
+        exports['qb-target']:AddBoxZone("weedshop-weedplant", vector3(383.4165, -813.49, 29.3042), 0.7, 1.5, {
             name="weedshop-weedplant",
             heading=97.15,
             debugPoly=false,
