@@ -128,8 +128,8 @@ RegisterNetEvent('gx-weedshop:server:BagOgKush', function()
 
         Player.Functions.RemoveItem('empty_weed_bag', 5)
         Player.Functions.RemoveItem('ogkush_bud', 5)
-        Player.Functions.AddItem('weed_og-kush', 5)
-        TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items["weed_og-kush"], "add")
+        Player.Functions.AddItem('weed_ogkush', 5)
+        TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items["weed_ogkush"], "add")
     else
         TriggerClientEvent('QBCore:Notify', src, 'You do not have the right items...', 'error')
     end
@@ -145,8 +145,8 @@ RegisterNetEvent('gx-weedshop:server:BagPurpleHaze', function()
 
         Player.Functions.RemoveItem('empty_weed_bag', 5)
         Player.Functions.RemoveItem('purplehaze_bud', 5)
-        Player.Functions.AddItem('weed_purple-haze', 5)
-        TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items["weed_purple-haze"], "add")
+        Player.Functions.AddItem('weed_purplehaze', 5)
+        TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items["weed_purplehaze"], "add")
     else
         TriggerClientEvent('QBCore:Notify', src, 'You do not have the right items...', 'error')
     end
@@ -179,8 +179,8 @@ RegisterNetEvent('gx-weedshop:server:BagWhiteWidow', function()
 
         Player.Functions.RemoveItem('empty_weed_bag', 5)
         Player.Functions.RemoveItem('whitewidow_bud', 5)
-        Player.Functions.AddItem('weed_white-widow', 5)
-        TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items["weed_white-widow"], "add")
+        Player.Functions.AddItem('weed_whitewidow', 5)
+        TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items["weed_whitewidow"], "add")
     else
         TriggerClientEvent('QBCore:Notify', src, 'You do not have the right items...', 'error')
     end
@@ -223,13 +223,13 @@ end)
 RegisterNetEvent('gx-weedshop:server:RollOgKush', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
-    local weedogkush = Player.Functions.GetItemByName('weed_og-kush')
+    local weedogkush = Player.Functions.GetItemByName('weed_ogkush')
     local rollingpaper = Player.Functions.GetItemByName('rolling_paper')
 
     if weedogkush ~= nil and rollingpaper ~= nil then
 
         Player.Functions.RemoveItem('rolling_paper', 5)
-        Player.Functions.RemoveItem('weed_og-kush', 5)
+        Player.Functions.RemoveItem('weed_ogkush', 5)
         Player.Functions.AddItem('ogkush_joint', 5)
         TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items["ogkush_joint"], "add")
     else
@@ -240,13 +240,13 @@ end)
 RegisterNetEvent('gx-weedshop:server:RollPurpleHaze', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
-    local weedphaze = Player.Functions.GetItemByName('weed_purple-haze')
+    local weedphaze = Player.Functions.GetItemByName('weed_purplehaze')
     local rollingpaper = Player.Functions.GetItemByName('rolling_paper')
 
     if weedphaze ~= nil and rollingpaper ~= nil then
 
         Player.Functions.RemoveItem('rolling_paper', 5)
-        Player.Functions.RemoveItem('weed_purple-haze', 5)
+        Player.Functions.RemoveItem('weed_purplehaze', 5)
         Player.Functions.AddItem('purplehaze_joint', 5)
         TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items["purplehaze_joint"], "add")
     else
@@ -274,13 +274,13 @@ end)
 RegisterNetEvent('gx-weedshop:server:RollWhiteWidow', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
-    local weedww = Player.Functions.GetItemByName('weed_white-widow')
+    local weedww = Player.Functions.GetItemByName('weed_whitewidow')
     local rollingpaper = Player.Functions.GetItemByName('rolling_paper')
 
     if weedww ~= nil and rollingpaper ~= nil then
 
         Player.Functions.RemoveItem('rolling_paper', 5)
-        Player.Functions.RemoveItem('weed_white-widow', 5)
+        Player.Functions.RemoveItem('weed_whitewidow', 5)
         Player.Functions.AddItem('widow_joint', 5)
         TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items["whitewidow_joint"], "add")
     else
