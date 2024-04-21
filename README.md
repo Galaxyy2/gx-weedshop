@@ -45,25 +45,15 @@ https://discord.gg/Cbb2Mb62hd
     rolling_paper                = { name = 'rolling_paper', label = 'Rolling Paper', weight = 0, type = 'item', image = 'rolling_paper.png', unique = false, useable = false, shouldClose = true, combinable = { accept = { 'weed_whitewidow', 'weed_skunk', 'weed_purplehaze', 'weed_ogkush', 'weed_amnesia', 'weed_ak47' }, reward = 'joint', anim = { dict = 'anim@amb@business@weed@weed_inspecting_high_dry@', lib = 'weed_inspecting_high_base_inspector', text = 'Rolling joint', timeOut = 5000, } }, description = 'Paper made specifically for encasing and smoking tobacco or cannabis.' },
 	
 # Jobs.lua
-['weedshop'] = { 
-        label = 'Weedshop', 
-        defaultDuty = true, 
-        offDutyPay = false, 
-        grades = { 
-            ['0'] = { 
-                name = 'Harvester', 
-                payment = 50 }, 
-            ['1'] = { 
-                    name = 'Bagger', 
-                    payment = 75 }, 
-            ['2'] = { 
-                        name = 'Roller', 
-                    payment = 100 }, 
-            ['3'] = { 
-                name = 'Manager', 
-                isboss = true, 
-                payment = 150 
-            }, 
-        }, 
+	['weedshop'] = {
+        label = 'Weedshop',
+        defaultDuty = true,
+        offDutyPay = false,
+        grades = {
+            ['0'] = { name = 'Harvester', payment = 50 },
+            ['1'] = { name = 'Bagger', payment = 75 },
+            ['2'] = { name = 'Roller', payment = 100 },
+            ['3'] = { name = 'Manager', isboss = true, payment = 150 },
+        },
     },
 
